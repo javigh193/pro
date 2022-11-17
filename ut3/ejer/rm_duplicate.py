@@ -4,3 +4,4 @@ for i, word in enumerate(input_values):
         if word == comparing_word:
             input_values.remove(comparing_word)
 print(input_values)
+# solución alterantiva con lista auxiliar en la que voy guardando las ocurrencias únicas
