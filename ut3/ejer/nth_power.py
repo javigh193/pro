@@ -16,4 +16,4 @@ def run(values: list, power: int) -> int:
         result = -1
     else:
         result = values[power] ** power
-    return result
+    return result  
