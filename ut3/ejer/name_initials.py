@@ -8,7 +8,8 @@ def run(fullname: str) -> str:
     buffer = []
     fullname = fullname.upper()
     split_fullname = fullname.split(",")
-    surnames = split_fullname[0].split(" ")
+    # split por defecto ya separa utilizando espacios en blanco
+    surnames = split_fullname[0].split()
     names = split_fullname[1].strip()
     buffer.append(names)
     buffer.extend(surnames)
