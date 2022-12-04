@@ -6,6 +6,11 @@ while True:
     game_end = False
     turn = 0
     print('¡Es hora de 3 en raya!\nSuerte a ambos jugadores\nPara abortar partida introduzca "abort"')
+    for row_index in range(len(board)):
+        for col_index in range(len(board)):
+            symbol = f'{row_index + 1}{col_index + 1}'
+            print(symbol, end='  ')
+        print()    
     # bucle principal
     # introducir movimiento
     while not game_end:
@@ -63,12 +68,16 @@ while True:
             print("Empate")
             game_end = True
         # imprimir el estado del tablero
-        if board[row_index][col_index] == 1:
-            print("🔴")
-        elif board[row_index][col_index] == 2:
-            print("❌")
-        else:
-            print("  ")
+        for row_index in range(len(board)):
+            for col_index in range(len(board)):
+                if board[row_index][col_index] == 1:
+                    symbol = '🔴'
+                elif board [row_index][col_index] == 2:
+                     symbol = '❌'
+                else:
+                    symbol = f'{row_index + 1}{col_index + 1}'
+            print(symbol, end='  ')
+        print()
     #dar la posibilidad de jugar otra partida
     print('¿Otra partida?')
     new_game = input('¿S/N? ')
